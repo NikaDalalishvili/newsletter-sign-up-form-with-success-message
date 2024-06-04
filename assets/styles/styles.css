@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+/*
+ *  GLOBAL VARIABLES
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #ffffff;
+}
+html picture,
+body picture {
+  display: flex;
+}
+html li,
+body li {
+  list-style: none;
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article .to-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article .to-submit.hide {
+  display: none;
+}
+article .submited {
+  margin-top: 149px;
+  padding: 0 24px;
+  max-width: 490px;
+  display: none;
+  flex-direction: column;
+}
+article .submited.active {
+  display: flex;
+}
+
+.to-submit .text-content {
+  margin: 40px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.text-content .form-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.texts .title {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #242742;
+}
+.texts .description {
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242742;
+}
+.texts .bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.texts .bullets li {
+  padding-left: 37px;
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242742;
+  position: relative;
+}
+.texts .bullets li::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url(../images/icon-list.svg);
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+
+.form-container .email-container {
+  display: flex;
+  justify-content: space-between;
+}
+.form-container .email-container label {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #242742;
+}
+.form-container .email-container .email-required {
+  display: none;
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: right;
+  color: #FF6155;
+}
+.form-container .email-container .email-required.active {
+  display: block;
+}
+.form-container input {
+  margin-top: 8px;
+  padding: 15px 23px;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 8px;
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242742;
+}
+.form-container input::placeholder {
+  opacity: 0.5;
+}
+.form-container input:focus {
+  border: 1px solid #242742;
+  outline: none;
+}
+.form-container input.invalid {
+  background: rgba(255, 97, 85, 0.15);
+  border: 1px solid #FF6155;
+  color: #FF6155;
+}
+.form-container .submit-btn {
+  margin-top: 24px;
+  padding: 18px 46px 14px 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #242742;
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.submited .title {
+  margin-top: 40px;
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #242742;
+}
+.submited .description {
+  margin-top: 24px;
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242742;
+}
+.submited .description span {
+  font-family: "Roboto Bold";
+}
+.submited .dismiss-btn {
+  margin-top: 263px;
+  padding: 18px 0 14px;
+  background: #242742;
+  border-radius: 8px;
+  border: none;
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+
+  .form-container .submit-btn:hover {
+    background: linear-gradient(#FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+    border-radius: 8px;
+  }
+
+  .submited .dismiss-btn:hover {
+    background: linear-gradient(#FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+    border-radius: 8px;
+  }
+}
+@media only screen and (min-width: 976px) {
+  html,
+body {
+    background-color: #36384e;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  article .to-submit {
+    border-radius: 36px;
+    padding: 24px 24px 24px 64px;
+    background-color: #ffffff;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+  article .submited {
+    margin: 0;
+    padding: 48px 64px 64px;
+    max-width: 504px;
+    border-radius: 36px;
+    background-color: #ffffff;
+  }
+
+  .to-submit .text-content {
+    margin: 0;
+  }
+
+  .text-content .texts {
+    width: 376px;
+  }
+
+  .texts .title {
+    font-size: 56px;
+  }
+  .submited .title {
+    font-size: 56px;
+  }
+  .submited .dismiss-btn {
+    margin-top: 40px;
+  }
+}

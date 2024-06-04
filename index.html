@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+
+  <main>
+    <article>
+      <div id="to-submit-cnt" class="to-submit">
+        <picture>
+          <source media="(min-width: 976px)" srcset="./assets/images/illustration-sign-up-desktop.svg" width="400" height="593" alt="illustrion of sign up for desktop">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" width="375" height="284"  alt="illustrion of sign up for mobile">
+        </picture>
+        <div class="text-content">
+          <div class="texts">
+            <p class="title">
+              Stay updated!
+            </p>
+            <p class="description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="bullets">
+              <li>
+                Product discovery and building what matters
+              </li>
+              <li>
+                Measuring to ensure updates are a success
+              </li>
+              <li>
+                And much more!
+              </li>
+            </ul>
+          </div>
+          <form class="form-container" action="mailto:dalalishvili.deutch@gmail.com">
+            <div class="email-container">
+              <label for="email-input">
+                Email address
+              </label>
+              <p class="email-required" id="email-required">
+                Valid email required
+              </p>
+            </div>
+            <input id="email-input" type="email" placeholder="email@company.com" required>
+            <button id="submit-btn" class="submit-btn" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="submited-cnt" class="submited">
+        <picture>
+          <img src="./assets/images/icon-success.svg" width="64" height="64" alt="icon of success">
+        </picture>
+        <p class="title">
+          Thanks for subscribing!
+        </p>
+        <p class="description">
+          A confirmation email has been sent to <span id="user-email"></span>. 
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button id="dismiss-btn" class="dismiss-btn">
+          Dismiss message
+        </button>
+      </div>
+    </article>
+  </main>
+
+  <script src="./assets/script/script.js"></script>
+</body>
+</html>
